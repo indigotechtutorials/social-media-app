@@ -1,0 +1,11 @@
+<div class="flex flex-col items-center py-24 px-4">
+  <h1 class="font-bold text-4xl">Your Feed</h1>
+  <p>View all the new posts from your community </p>
+  <div class="mt-6 max-w-2xl w-full mx-auto flex items-center justify-between"> 
+    <%= link_to "Create new post", new_post_path, class: "bg-gradient-to-br from-purple-500 to-pink-500 text-pink-50 p-2 rounded-lg hover:from-pink-500 hover:to-purple-500 hover:scale-105 transition-all duration-250" %>
+  </div>
+
+  <div class="max-w-2xl w-full grid gap-8 mt-8"> 
+    <%= render partial: "post", collection: @posts %>
+  </div>
+</div>
