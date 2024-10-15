@@ -1,4 +1,4 @@
-<div class="w-full min-h-[100vh]">
+<div class="w-full min-h-[100vh] pt-24">
   <div class="max-w-xl w-full mx-auto shadow-lg bg-gray-200 rounded-lg py-8">
     <h2 class="text-xl mb-4 text-center">Edit <%= resource_name.to_s.humanize %></h2>
 
@@ -9,6 +9,11 @@
         <div class="field mb-4">
           <%= f.label :email %><br />
           <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "w-full rounded-lg bg-gray-50" %>
+        </div>
+
+        <div class="field mb-4">
+          <%= f.label :username %><br />
+          <%= f.text_field :username, class: "w-full rounded-lg bg-gray-50" %>
         </div>
 
         <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
