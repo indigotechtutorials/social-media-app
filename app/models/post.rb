@@ -3,6 +3,7 @@ class Post < ApplicationRecord
   has_rich_text :body
   has_many_attached :images
   has_many :reactions
+  has_many :comments
 
   def feed_body
     char_limit = images.any? ? 100 : 400
