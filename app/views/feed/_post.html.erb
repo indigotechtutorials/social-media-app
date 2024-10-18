@@ -62,7 +62,7 @@
     </div>
   </div>
 
-  <%= turbo_frame_tag :comments do %>
+  <%= turbo_frame_tag post, :comments do %>
     <div class="w-full flex items-center gap-4">
       <%= link_to "View #{post.comments.count} comments", post_comments_path(post), class: "text-gray-600 border-2 border-gray-600 p-2 rounded-lg hover:bg-blue-500" %>
       <%= link_to "Leave a comment", new_post_comment_path(post), class: "text-gray-600 border-2 border-gray-600 p-2 rounded-lg hover:bg-green-500" %>
